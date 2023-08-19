@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/calculator")
 public class CalculatorController {
     private final CalculatorService calculatorService;
+
     public CalculatorController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
     }
+
     @GetMapping
     public String greetings() {
         return calculatorService.greetings();
@@ -35,7 +37,6 @@ public class CalculatorController {
     @GetMapping("/divide")
     public String divide(@RequestParam int num1, @RequestParam int num2) {
         return calculatorService.divide(num1, num2);
-
     }
 }
 
