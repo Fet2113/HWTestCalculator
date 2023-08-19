@@ -9,7 +9,6 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CalculatorServiceParametrizedTest {
-
     private final CalculatorService calculatorService = new CalculatorService();
 
     public static Stream<Arguments> plusParams() {

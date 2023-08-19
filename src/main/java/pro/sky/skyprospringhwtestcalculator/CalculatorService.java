@@ -7,18 +7,22 @@ public class CalculatorService {
     public String greetings() {
         return "Добро пожаловать в калькулятор!";
     }
+
     public String plus(int num1, int num2) {
         int result = num1 + num2;
         return getResult(num1, num2, "+", Integer.toString(result));
     }
+
     public String minus(int num1, int num2) {
         int result = num1 - num2;
         return getResult(num1, num2, "-", Integer.toString(result));
     }
+
     public String multiply(int num1, int num2) {
         int result = num1 * num2;
         return getResult(num1, num2, "*", Integer.toString(result));
     }
+
     public String divide(int num1, int num2) {
         if (num2 == 0) {
             throw new ZeroDivideException("На ноль делить нельзя!");
